@@ -28,7 +28,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6L7-8B-6u6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1U0-lx-f97"/>
                             <constraint firstItem="6L7-8B-6u6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bF8-hj-tIX"/>
@@ -47,46 +47,132 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-Pm-c9z">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0w-5h-x0r">
                                 <rect key="frame" x="125.5" y="417" width="163" height="62"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="To Next">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W14-6I-fDg">
-                                <rect key="frame" x="241" y="587" width="120" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Hi There">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
-                                </buttonConfiguration>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqJ-Pm-c9z">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="62"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="To Next">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lqJ-Pm-c9z" secondAttribute="trailing" id="1hR-n0-l4h"/>
+                                    <constraint firstItem="lqJ-Pm-c9z" firstAttribute="leading" secondItem="F0w-5h-x0r" secondAttribute="leading" id="HrR-rX-d2g"/>
+                                    <constraint firstItem="lqJ-Pm-c9z" firstAttribute="top" secondItem="F0w-5h-x0r" secondAttribute="top" id="YTU-rA-4Ot"/>
+                                    <constraint firstAttribute="bottom" secondItem="lqJ-Pm-c9z" secondAttribute="bottom" id="db1-nO-Tfb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77x-kG-eSQ">
+                                <rect key="frame" x="31" y="104" width="120" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W14-6I-fDg">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Hi There">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="tOm-Nj-mww" kind="show" id="urH-BX-UIf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="W14-6I-fDg" secondAttribute="trailing" id="0ZZ-pF-mgM"/>
+                                    <constraint firstItem="W14-6I-fDg" firstAttribute="leading" secondItem="77x-kG-eSQ" secondAttribute="leading" id="11I-fM-JDK"/>
+                                    <constraint firstItem="W14-6I-fDg" firstAttribute="top" secondItem="77x-kG-eSQ" secondAttribute="top" id="91R-Bq-RoY"/>
+                                    <constraint firstAttribute="bottom" secondItem="W14-6I-fDg" secondAttribute="bottom" id="yGi-oT-2Ps"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0S1-ni-KFo"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lqJ-Pm-c9z" firstAttribute="centerX" secondItem="QAn-Yp-aXB" secondAttribute="centerX" id="P2e-gm-cx6"/>
-                            <constraint firstItem="lqJ-Pm-c9z" firstAttribute="centerY" secondItem="QAn-Yp-aXB" secondAttribute="centerY" id="i0Z-OC-8b8"/>
-                            <constraint firstItem="0S1-ni-KFo" firstAttribute="bottom" secondItem="W14-6I-fDg" secondAttribute="bottom" constant="231" id="pAe-hP-ex5"/>
-                            <constraint firstItem="0S1-ni-KFo" firstAttribute="trailing" secondItem="W14-6I-fDg" secondAttribute="trailing" constant="53" id="qMt-uH-Prl"/>
-                            <constraint firstItem="W14-6I-fDg" firstAttribute="leading" secondItem="0S1-ni-KFo" secondAttribute="leading" constant="241" id="tX2-BN-d0y"/>
+                            <constraint firstItem="77x-kG-eSQ" firstAttribute="leading" secondItem="0S1-ni-KFo" secondAttribute="leading" constant="31" id="8QH-fX-zgN"/>
+                            <constraint firstItem="77x-kG-eSQ" firstAttribute="top" secondItem="0S1-ni-KFo" secondAttribute="top" constant="60" id="BgH-YA-iWg"/>
+                            <constraint firstItem="F0w-5h-x0r" firstAttribute="centerX" secondItem="QAn-Yp-aXB" secondAttribute="centerX" id="gtN-v3-UA9"/>
+                            <constraint firstItem="F0w-5h-x0r" firstAttribute="centerY" secondItem="QAn-Yp-aXB" secondAttribute="centerY" id="lAY-Na-S2f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Phb-r3-Rbd"/>
                     <connections>
                         <outlet property="FakeButton" destination="lqJ-Pm-c9z" id="Aoh-bi-yaH"/>
                         <outlet property="fakeButton" destination="lqJ-Pm-c9z" id="1pT-HD-eFq"/>
+                        <outlet property="fakebtnview" destination="F0w-5h-x0r" id="jEA-MY-HPY"/>
                         <outlet property="realButton" destination="W14-6I-fDg" id="EhG-gl-Sff"/>
+                        <outlet property="realbtnview" destination="77x-kG-eSQ" id="aEG-kN-D0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fl9-qy-xK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755" y="84"/>
         </scene>
+        <!--Picker View View Controller-->
+        <scene sceneID="SC5-JX-PLp">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tOm-Nj-mww" customClass="PickerViewViewController" customModule="PhonDLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jig-BU-f1f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84X-ay-Ock">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tOm-Nj-mww" id="Mvq-Xy-RWW"/>
+                                    <outlet property="delegate" destination="tOm-Nj-mww" id="YuY-Bc-RZR"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-fL-OOO">
+                                <rect key="frame" x="162" y="659" width="90" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4m-Ji-uZX">
+                                <rect key="frame" x="131" y="562" width="164" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="IS IT RIGHT?">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="isItRight:" destination="tOm-Nj-mww" eventType="touchUpInside" id="8UZ-we-2ZR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U07-Ed-Qxh"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="84X-ay-Ock" firstAttribute="centerY" secondItem="Jig-BU-f1f" secondAttribute="centerY" id="3cm-JP-ITR"/>
+                            <constraint firstItem="JyI-fL-OOO" firstAttribute="top" secondItem="84X-ay-Ock" secondAttribute="bottom" constant="103" id="NPd-N6-ZAN"/>
+                            <constraint firstItem="84X-ay-Ock" firstAttribute="centerX" secondItem="Jig-BU-f1f" secondAttribute="centerX" id="Nrs-uI-UCo"/>
+                            <constraint firstItem="JyI-fL-OOO" firstAttribute="centerX" secondItem="Jig-BU-f1f" secondAttribute="centerX" id="Tcu-hw-vni"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V1J-66-TbR"/>
+                    <connections>
+                        <outlet property="isItRightbtn" destination="Q4m-Ji-uZX" id="xX1-DS-wLK"/>
+                        <outlet property="nextButton" destination="JyI-fL-OOO" id="Mvj-Cb-dF1"/>
+                        <outlet property="picker" destination="84X-ay-Ock" id="MOk-Ea-aFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFn-YI-DFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494.2028985507247" y="83.705357142857139"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

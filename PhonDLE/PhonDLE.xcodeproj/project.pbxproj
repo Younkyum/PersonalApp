@@ -14,6 +14,7 @@
 		417025F927F1A331000BDCE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417025F727F1A331000BDCE8 /* LaunchScreen.storyboard */; };
 		4170260127F1A46F000BDCE8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170260027F1A46F000BDCE8 /* MainViewController.swift */; };
 		4170260527F1A54F000BDCE8 /* TouchButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170260427F1A54F000BDCE8 /* TouchButtonViewController.swift */; };
+		4170260727F1DB5B000BDCE8 /* PickerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170260627F1DB5B000BDCE8 /* PickerViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		417025FA27F1A331000BDCE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4170260027F1A46F000BDCE8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4170260427F1A54F000BDCE8 /* TouchButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchButtonViewController.swift; sourceTree = "<group>"; };
+		4170260627F1DB5B000BDCE8 /* PickerViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				417025F527F1A331000BDCE8 /* Assets.xcassets */,
 				417025F727F1A331000BDCE8 /* LaunchScreen.storyboard */,
 				417025FA27F1A331000BDCE8 /* Info.plist */,
+				4170260627F1DB5B000BDCE8 /* PickerViewViewController.swift */,
 			);
 			path = PhonDLE;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4170260527F1A54F000BDCE8 /* TouchButtonViewController.swift in Sources */,
+				4170260727F1DB5B000BDCE8 /* PickerViewViewController.swift in Sources */,
 				4170260127F1A46F000BDCE8 /* MainViewController.swift in Sources */,
 				417025ED27F1A330000BDCE8 /* AppDelegate.swift in Sources */,
 				417025EF27F1A330000BDCE8 /* SceneDelegate.swift in Sources */,
