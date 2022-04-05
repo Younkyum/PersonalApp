@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iYA-Fp-Z1j">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--지도-->
+        <scene sceneID="6Vh-DT-hvl">
+            <objects>
+                <viewController storyboardIdentifier="MVC" id="gbg-ri-HxW" customClass="MapViewController" customModule="ParkLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNQ-ZV-oLK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Djy-po-Z6L">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMx-13-SOq">
+                                <rect key="frame" x="127" y="738" width="160" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bjj-h7-qcp"/>
+                                    <constraint firstAttribute="width" constant="160" id="rxL-iQ-KtX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="현재 위치" image="location" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yti-b6-AJx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Djy-po-Z6L" firstAttribute="top" secondItem="CNQ-ZV-oLK" secondAttribute="top" id="JXk-bC-cLQ"/>
+                            <constraint firstItem="yti-b6-AJx" firstAttribute="bottom" secondItem="yMx-13-SOq" secondAttribute="bottom" constant="25" id="Sw3-Qr-JC5"/>
+                            <constraint firstItem="yMx-13-SOq" firstAttribute="centerX" secondItem="Djy-po-Z6L" secondAttribute="centerX" id="TXx-8l-LGM"/>
+                            <constraint firstItem="Djy-po-Z6L" firstAttribute="leading" secondItem="yti-b6-AJx" secondAttribute="leading" id="UsE-6I-w6s"/>
+                            <constraint firstItem="yti-b6-AJx" firstAttribute="bottom" secondItem="Djy-po-Z6L" secondAttribute="bottom" id="rnk-DB-wH3"/>
+                            <constraint firstItem="yti-b6-AJx" firstAttribute="trailing" secondItem="Djy-po-Z6L" secondAttribute="trailing" id="s7I-iq-AmS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="지도" image="map" catalog="system" id="T4h-cH-6C5"/>
+                    <connections>
+                        <outlet property="MyMap" destination="Djy-po-Z6L" id="zSZ-mb-cZT"/>
+                        <outlet property="currentLocationButton" destination="yMx-13-SOq" id="slO-SG-mMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tw1-ea-aGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769.5652173913045" y="533.70535714285711"/>
+        </scene>
+        <!--주차장-->
+        <scene sceneID="o8W-GL-szd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWB-bG-vhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="PLVC" id="Fdv-V4-8HZ" customClass="ParkLocationViewController" customModule="ParkLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sQq-Dl-oY7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9r-hu-yNf">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fdv-V4-8HZ" id="pA2-1h-fsq"/>
+                                    <outlet property="delegate" destination="Fdv-V4-8HZ" id="JJ8-Lq-cTK"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B1층 A구역 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-R9-Dbj">
+                                <rect key="frame" x="143.5" y="279" width="127" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wri-70-vIM">
+                                <rect key="frame" x="183.5" y="579" width="47" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="checkmark.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                </state>
+                                <state key="selected" image="checkmark.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Xg-sq-y4s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a9r-hu-yNf" firstAttribute="centerX" secondItem="sQq-Dl-oY7" secondAttribute="centerX" id="E3e-2l-Trk"/>
+                            <constraint firstItem="9Xg-sq-y4s" firstAttribute="trailing" secondItem="a9r-hu-yNf" secondAttribute="trailing" id="E8n-fD-LEU"/>
+                            <constraint firstItem="a9r-hu-yNf" firstAttribute="top" secondItem="ovp-R9-Dbj" secondAttribute="bottom" constant="35" id="axh-ee-pvt"/>
+                            <constraint firstItem="ovp-R9-Dbj" firstAttribute="centerX" secondItem="sQq-Dl-oY7" secondAttribute="centerX" id="eCB-MQ-3Wz"/>
+                            <constraint firstItem="a9r-hu-yNf" firstAttribute="centerY" secondItem="sQq-Dl-oY7" secondAttribute="centerY" id="iCg-8T-srd"/>
+                            <constraint firstItem="a9r-hu-yNf" firstAttribute="leading" secondItem="9Xg-sq-y4s" secondAttribute="leading" id="nuo-4d-Pr5"/>
+                            <constraint firstItem="wri-70-vIM" firstAttribute="top" secondItem="a9r-hu-yNf" secondAttribute="bottom" constant="23" id="pte-R1-GEH"/>
+                            <constraint firstItem="wri-70-vIM" firstAttribute="centerX" secondItem="sQq-Dl-oY7" secondAttribute="centerX" id="tQY-2D-DCs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="주차장" image="parkingsign.circle" catalog="system" id="7iN-6d-Rrr"/>
+                    <connections>
+                        <outlet property="LocationPickerView" destination="a9r-hu-yNf" id="3Vl-L0-OVo"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1742.0289855072465" y="-127.23214285714285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zxn-gV-C4g">
+            <objects>
+                <tabBarController id="iYA-Fp-Z1j" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jZn-4D-4S8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Fdv-V4-8HZ" kind="relationship" relationship="viewControllers" id="NV3-Ln-lPK"/>
+                        <segue destination="gbg-ri-HxW" kind="relationship" relationship="viewControllers" id="ouE-zI-TzU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHZ-LM-kFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="parkingsign.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

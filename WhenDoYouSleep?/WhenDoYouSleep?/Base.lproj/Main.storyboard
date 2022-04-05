@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wkp-qb-Dau">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8lk-f7-V4n">
+            <objects>
+                <navigationController id="wkp-qb-Dau" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxu-cc-lTu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bql-Y4-7UJ" kind="relationship" relationship="rootViewController" id="Nzs-ht-t5c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPG-rO-Mjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="msJ-5n-4ji">
+            <objects>
+                <viewController id="Bql-Y4-7UJ" customClass="ViewController" customModule="WhenDoYouSleep_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b5f-II-Tx0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-Px-M9D">
+                                <rect key="frame" x="30" y="74" width="224" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLQ-ic-c6o">
+                                <rect key="frame" x="30" y="50" width="74" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금부터 잔다면?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5d-jd-xeJ">
+                                <rect key="frame" x="30" y="154" width="136" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1시간 30분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-mB-Ucn">
+                                <rect key="frame" x="30" y="193" width="89.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:30:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGa-iT-Xe2">
+                                <rect key="frame" x="144.5" y="185.5" width="131.5" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srJ-fp-Tk4">
+                                <rect key="frame" x="144.5" y="234.5" width="137" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4시간 30분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVW-xu-4D4">
+                                <rect key="frame" x="30" y="291" width="93" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i10-Ds-3RT">
+                                <rect key="frame" x="30" y="340" width="47" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7시간 30분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-f1-sVh">
+                                <rect key="frame" x="30" y="389" width="92" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-nA-NCI">
+                                <rect key="frame" x="30" y="242" width="47" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:30:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWD-6O-9v5">
+                                <rect key="frame" x="144.5" y="283.5" width="137" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn4-p1-Hul">
+                                <rect key="frame" x="144.5" y="332.5" width="138" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:30:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4e-8j-FdY">
+                                <rect key="frame" x="144.5" y="381.5" width="134" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIw-p6-GLw">
+                                <rect key="frame" x="30" y="681" width="47" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7시간 30분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuR-qd-h6l">
+                                <rect key="frame" x="30" y="730" width="92" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEh-d6-Xt3">
+                                <rect key="frame" x="144.5" y="673" width="138" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:30:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDy-br-6h7">
+                                <rect key="frame" x="144.5" y="722" width="134" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDx-eo-R7J">
+                                <rect key="frame" x="10" y="436" width="394" height="1"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="1pJ-yh-oh6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제 일어날래?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF9-18-ShG">
+                                <rect key="frame" x="30" y="457" width="119" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 시간은 어떤가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-yx-nF1">
+                                <rect key="frame" x="30" y="620" width="158" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="vce-b8-r2f">
+                                <rect key="frame" x="10" y="481" width="394" height="131"/>
+                                <connections>
+                                    <action selector="timePicker:" destination="Bql-Y4-7UJ" eventType="valueChanged" id="ROq-ys-LhT"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="취침 가능 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-yg-yO7">
+                                <rect key="frame" x="30" y="654" width="81" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9c7-D9-Dko"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y8b-yx-nF1" firstAttribute="leading" secondItem="uF9-18-ShG" secondAttribute="leading" id="0AP-30-4qJ"/>
+                            <constraint firstItem="i10-Ds-3RT" firstAttribute="leading" secondItem="QVW-xu-4D4" secondAttribute="leading" id="1op-vb-99E"/>
+                            <constraint firstAttribute="trailing" secondItem="CDx-eo-R7J" secondAttribute="trailing" constant="10" id="2AY-kA-hJl"/>
+                            <constraint firstItem="vce-b8-r2f" firstAttribute="leading" secondItem="9c7-D9-Dko" secondAttribute="leading" constant="10" id="2Wh-cg-cZ4"/>
+                            <constraint firstItem="Gn4-p1-Hul" firstAttribute="centerY" secondItem="i10-Ds-3RT" secondAttribute="centerY" id="2wb-f3-JIj"/>
+                            <constraint firstItem="srJ-fp-Tk4" firstAttribute="centerY" secondItem="RkN-nA-NCI" secondAttribute="centerY" id="6jy-t6-Ody"/>
+                            <constraint firstItem="k5d-jd-xeJ" firstAttribute="top" secondItem="cgp-Px-M9D" secondAttribute="bottom" constant="20" id="8wB-Cj-nOy"/>
+                            <constraint firstItem="lIw-p6-GLw" firstAttribute="leading" secondItem="uF9-18-ShG" secondAttribute="leading" id="9dN-tL-ZrV"/>
+                            <constraint firstItem="Gn4-p1-Hul" firstAttribute="leading" secondItem="bGa-iT-Xe2" secondAttribute="leading" id="C0C-h7-fr5"/>
+                            <constraint firstItem="9c7-D9-Dko" firstAttribute="trailing" secondItem="vce-b8-r2f" secondAttribute="trailing" constant="10" id="D7z-tz-RCi"/>
+                            <constraint firstItem="bGa-iT-Xe2" firstAttribute="leading" secondItem="0Of-mB-Ucn" secondAttribute="trailing" constant="25" id="EIK-1h-GKp"/>
+                            <constraint firstItem="tuR-qd-h6l" firstAttribute="centerY" secondItem="bDy-br-6h7" secondAttribute="centerY" id="EW5-b5-dwG"/>
+                            <constraint firstItem="RkN-nA-NCI" firstAttribute="leading" secondItem="0Of-mB-Ucn" secondAttribute="leading" id="EX3-5F-K4U"/>
+                            <constraint firstItem="CDx-eo-R7J" firstAttribute="top" secondItem="G4e-8j-FdY" secondAttribute="bottom" constant="15" id="Fda-T3-5ob"/>
+                            <constraint firstItem="CDx-eo-R7J" firstAttribute="leading" secondItem="b5f-II-Tx0" secondAttribute="leading" constant="10" id="Fpo-yj-rpw"/>
+                            <constraint firstItem="tuR-qd-h6l" firstAttribute="leading" secondItem="lIw-p6-GLw" secondAttribute="leading" id="G7o-gj-AFN"/>
+                            <constraint firstItem="srJ-fp-Tk4" firstAttribute="leading" secondItem="bGa-iT-Xe2" secondAttribute="leading" id="H2p-uZ-c4j"/>
+                            <constraint firstItem="BEh-d6-Xt3" firstAttribute="leading" secondItem="G4e-8j-FdY" secondAttribute="leading" id="Hjp-T8-aAR"/>
+                            <constraint firstItem="uF9-18-ShG" firstAttribute="top" secondItem="CDx-eo-R7J" secondAttribute="bottom" constant="20" id="Jc3-PR-xQd"/>
+                            <constraint firstItem="bhM-yg-yO7" firstAttribute="top" secondItem="Y8b-yx-nF1" secondAttribute="bottom" constant="10" id="Jkb-I2-QQR"/>
+                            <constraint firstItem="cgp-Px-M9D" firstAttribute="top" secondItem="SLQ-ic-c6o" secondAttribute="bottom" id="KNl-Fh-Q10"/>
+                            <constraint firstItem="RkN-nA-NCI" firstAttribute="top" secondItem="0Of-mB-Ucn" secondAttribute="bottom" constant="25" id="M7r-Md-zcY"/>
+                            <constraint firstItem="uF9-18-ShG" firstAttribute="leading" secondItem="k5d-jd-xeJ" secondAttribute="leading" id="MCR-yN-zfH"/>
+                            <constraint firstItem="SLQ-ic-c6o" firstAttribute="top" secondItem="b5f-II-Tx0" secondAttribute="top" constant="50" id="Nc9-cb-ak4"/>
+                            <constraint firstItem="k5d-jd-xeJ" firstAttribute="leading" secondItem="9c7-D9-Dko" secondAttribute="leading" constant="30" id="Qlf-me-CP0"/>
+                            <constraint firstItem="GFk-f1-sVh" firstAttribute="centerY" secondItem="G4e-8j-FdY" secondAttribute="centerY" id="Rbw-pQ-CTf"/>
+                            <constraint firstItem="lIw-p6-GLw" firstAttribute="top" secondItem="bhM-yg-yO7" secondAttribute="bottom" constant="10" id="TFb-5s-DxU"/>
+                            <constraint firstItem="SLQ-ic-c6o" firstAttribute="leading" secondItem="9c7-D9-Dko" secondAttribute="leading" constant="30" id="XfQ-HQ-fFz"/>
+                            <constraint firstItem="bDy-br-6h7" firstAttribute="leading" secondItem="BEh-d6-Xt3" secondAttribute="leading" id="Xqc-rX-FR6"/>
+                            <constraint firstItem="vce-b8-r2f" firstAttribute="height" secondItem="b5f-II-Tx0" secondAttribute="height" multiplier="0.146205" id="aLt-8o-k7x"/>
+                            <constraint firstItem="i10-Ds-3RT" firstAttribute="top" secondItem="QVW-xu-4D4" secondAttribute="bottom" constant="25" id="aMW-tW-nuV"/>
+                            <constraint firstItem="G4e-8j-FdY" firstAttribute="leading" secondItem="Gn4-p1-Hul" secondAttribute="leading" id="afi-Cm-Cry"/>
+                            <constraint firstItem="BEh-d6-Xt3" firstAttribute="centerY" secondItem="lIw-p6-GLw" secondAttribute="centerY" id="bSf-YD-DcG"/>
+                            <constraint firstItem="QVW-xu-4D4" firstAttribute="leading" secondItem="0Of-mB-Ucn" secondAttribute="leading" id="byP-3k-5Pn"/>
+                            <constraint firstItem="Y8b-yx-nF1" firstAttribute="top" secondItem="vce-b8-r2f" secondAttribute="bottom" constant="8" symbolic="YES" id="cJe-dJ-d4t"/>
+                            <constraint firstItem="GFk-f1-sVh" firstAttribute="top" secondItem="i10-Ds-3RT" secondAttribute="bottom" constant="25" id="cQ5-R3-clR"/>
+                            <constraint firstItem="cgp-Px-M9D" firstAttribute="leading" secondItem="SLQ-ic-c6o" secondAttribute="leading" id="fuX-At-AHj"/>
+                            <constraint firstItem="QVW-xu-4D4" firstAttribute="top" secondItem="RkN-nA-NCI" secondAttribute="bottom" constant="25" id="hCC-tO-9yV"/>
+                            <constraint firstItem="QVW-xu-4D4" firstAttribute="centerY" secondItem="NWD-6O-9v5" secondAttribute="centerY" id="mco-hn-YNu"/>
+                            <constraint firstItem="0Of-mB-Ucn" firstAttribute="leading" secondItem="9c7-D9-Dko" secondAttribute="leading" constant="30" id="mez-SH-HaE"/>
+                            <constraint firstItem="NWD-6O-9v5" firstAttribute="leading" secondItem="srJ-fp-Tk4" secondAttribute="leading" id="nAM-KF-Ran"/>
+                            <constraint firstItem="bhM-yg-yO7" firstAttribute="leading" secondItem="Y8b-yx-nF1" secondAttribute="leading" id="oAp-xA-Pjr"/>
+                            <constraint firstItem="GFk-f1-sVh" firstAttribute="leading" secondItem="i10-Ds-3RT" secondAttribute="leading" id="oe2-Hj-dYE"/>
+                            <constraint firstItem="0Of-mB-Ucn" firstAttribute="top" secondItem="k5d-jd-xeJ" secondAttribute="bottom" constant="15" id="rb8-fI-611"/>
+                            <constraint firstItem="bGa-iT-Xe2" firstAttribute="centerY" secondItem="0Of-mB-Ucn" secondAttribute="centerY" id="xHd-gb-Pc6"/>
+                            <constraint firstItem="tuR-qd-h6l" firstAttribute="top" secondItem="lIw-p6-GLw" secondAttribute="bottom" constant="25" id="yQq-Vc-3a9"/>
+                            <constraint firstItem="lIw-p6-GLw" firstAttribute="leading" secondItem="bhM-yg-yO7" secondAttribute="leading" id="z1f-jA-mqW"/>
+                            <constraint firstItem="vce-b8-r2f" firstAttribute="top" secondItem="uF9-18-ShG" secondAttribute="bottom" id="zBr-pK-O8a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cdN-39-AIa"/>
+                    <connections>
+                        <outlet property="currentTime" destination="cgp-Px-M9D" id="CMH-yo-kq3"/>
+                        <outlet property="forHourHalf" destination="NWD-6O-9v5" id="HfP-cK-46W"/>
+                        <outlet property="oneHourHalf" destination="bGa-iT-Xe2" id="DYC-ZY-G9r"/>
+                        <outlet property="setSevenHours" destination="bDy-br-6h7" id="QXG-TB-1gv"/>
+                        <outlet property="setSixHours" destination="BEh-d6-Xt3" id="Byu-cp-HQW"/>
+                        <outlet property="sevenHourHalf" destination="G4e-8j-FdY" id="8mU-A3-xbJ"/>
+                        <outlet property="sixHours" destination="Gn4-p1-Hul" id="klY-Qy-mGU"/>
+                        <outlet property="threeHours" destination="srJ-fp-Tk4" id="IeR-xy-Xrm"/>
+                        <outlet property="timePicker" destination="vce-b8-r2f" id="UyR-o8-5xK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fl8-y0-9wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
