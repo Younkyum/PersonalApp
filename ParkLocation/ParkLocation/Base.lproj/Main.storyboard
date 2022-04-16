@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="height" constant="50" id="bjj-h7-qcp"/>
                                     <constraint firstAttribute="width" constant="160" id="rxL-iQ-KtX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="현재 위치" image="location" catalog="system">
@@ -53,12 +53,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw1-ea-aGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769.5652173913045" y="533.70535714285711"/>
+            <point key="canvasLocation" x="1742" y="536"/>
         </scene>
         <!--주차장-->
         <scene sceneID="o8W-GL-szd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bWB-bG-vhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PLVC" id="Fdv-V4-8HZ" customClass="ParkLocationViewController" customModule="ParkLocation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sQq-Dl-oY7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -107,6 +106,7 @@
                         <outlet property="LocationPickerView" destination="a9r-hu-yNf" id="3Vl-L0-OVo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWB-bG-vhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742.0289855072465" y="-127.23214285714285"/>
         </scene>

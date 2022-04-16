@@ -24,12 +24,27 @@ class ViewController: UIViewController {
     // MARK: - Properties
     var timer: Timer!
     var nextTimer: Timer!
-        
+    var backgroundIsGradient = false
+    @IBOutlet weak var imageViewBackground: UIImageView!
+    @IBOutlet weak var nigthButton: UIButton!
+    
     
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.nigthButton.setImage(UIImage(named: "moon.fill"), for: .selected)
+        self.nigthButton.setImage(UIImage(named: "moon"), for: .normal)
+
+        
+        if backgroundIsGradient == false {
+            imageViewBackground.alpha = 0.0
+            self.nigthButton.isSelected = false
+        } else {
+            imageViewBackground.alpha = 1.0
+            self.nigthButton.isSelected = true
+        }
+
         timePicker.setValue(UIColor.white, forKeyPath: "textColor")
         timer = Timer.scheduledTimer(timeInterval: 0.5,
                                      target: self,
@@ -57,6 +72,17 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func pushNightButton(_ sender: Any) {
+        if backgroundIsGradient == true {
+            backgroundIsGradient = false
+            self.imageViewBackground.alpha = 0.0
+            self.nigthButton.isSelected = false
+        } else {
+            backgroundIsGradient = true
+            self.imageViewBackground.alpha = 1.0
+            self.nigthButton.isSelected = true
+        }
+    }
     
     
 
@@ -79,12 +105,16 @@ class ViewController: UIViewController {
         sixHours.text = ct.string(from: Date(timeIntervalSinceNow: 21600))
         sevenHourHalf.text = ct.string(from: Date(timeIntervalSinceNow: 27000))
     }
-    
-    private func changeImage() {
-        
-    }
 }
 
-extension UIView{
-    
+extension UIView {
+    @IBInspectable var conerRadius: CGFloat { // 모서리 둥글게
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
 }

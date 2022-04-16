@@ -13,20 +13,19 @@ class ParkLocationViewController: UIViewController {
     
     let floorList = ["10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "B1", "B2", "B3", "B4", "B5", "B6"]
     let alphabetList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    let numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+    let numberList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
-
-}
-
-extension ParkLocationViewController: UIPickerViewDelegate {
     
-}
+    func isPickerViewValueChanged(_ sender: Any) {
+        
+    }
 
+
+}
 extension ParkLocationViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -44,6 +43,19 @@ extension ParkLocationViewController: UIPickerViewDataSource {
             return 0
         }
     }
-    
-    
+}
+
+extension ParkLocationViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch component {
+        case 0:
+            return floorList[row]
+        case 1:
+            return alphabetList[row]
+        case 2:
+            return numberList[row]
+        default:
+            return "Fatal Error"
+        }
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417E55EF28066FED00E2C0D1 /* WhenDoYouSleepWidjetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 417E55DE28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41F51AAA27FBF6DC0018D209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F51AA927FBF6DC0018D209 /* AppDelegate.swift */; };
 		41F51AAC27FBF6DC0018D209 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F51AAB27FBF6DC0018D209 /* SceneDelegate.swift */; };
 		41F51AAE27FBF6DC0018D209 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F51AAD27FBF6DC0018D209 /* ViewController.swift */; };
@@ -15,7 +16,32 @@
 		41F51AB627FBF6DD0018D209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F51AB427FBF6DD0018D209 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		417E55ED28066FED00E2C0D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41F51A9E27FBF6DC0018D209 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 417E55DD28066FEC00E2C0D1;
+			remoteInfo = WhenDoYouSleepWidjetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		417E55F028066FED00E2C0D1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				417E55EF28066FED00E2C0D1 /* WhenDoYouSleepWidjetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		417E55DE28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WhenDoYouSleepWidjetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F51AA627FBF6DC0018D209 /* WhenDoYouSleep?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhenDoYouSleep?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F51AA927FBF6DC0018D209 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41F51AAB27FBF6DC0018D209 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		417E55DB28066FEC00E2C0D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41F51AA327FBF6DC0018D209 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				41F51AA627FBF6DC0018D209 /* WhenDoYouSleep?.app */,
+				417E55DE28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +104,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		417E55DD28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417E55F328066FED00E2C0D1 /* Build configuration list for PBXNativeTarget "WhenDoYouSleepWidjetExtension" */;
+			buildPhases = (
+				417E55DA28066FEC00E2C0D1 /* Sources */,
+				417E55DB28066FEC00E2C0D1 /* Frameworks */,
+				417E55DC28066FEC00E2C0D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhenDoYouSleepWidjetExtension;
+			productName = WhenDoYouSleepWidjetExtension;
+			productReference = 417E55DE28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		41F51AA527FBF6DC0018D209 /* WhenDoYouSleep? */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41F51ABA27FBF6DD0018D209 /* Build configuration list for PBXNativeTarget "WhenDoYouSleep?" */;
@@ -77,10 +128,12 @@
 				41F51AA227FBF6DC0018D209 /* Sources */,
 				41F51AA327FBF6DC0018D209 /* Frameworks */,
 				41F51AA427FBF6DC0018D209 /* Resources */,
+				417E55F028066FED00E2C0D1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				417E55EE28066FED00E2C0D1 /* PBXTargetDependency */,
 			);
 			name = "WhenDoYouSleep?";
 			productName = "WhenDoYouSleep?";
@@ -97,6 +150,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					417E55DD28066FEC00E2C0D1 = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					41F51AA527FBF6DC0018D209 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -116,11 +172,19 @@
 			projectRoot = "";
 			targets = (
 				41F51AA527FBF6DC0018D209 /* WhenDoYouSleep? */,
+				417E55DD28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		417E55DC28066FEC00E2C0D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41F51AA427FBF6DC0018D209 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +198,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		417E55DA28066FEC00E2C0D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41F51AA227FBF6DC0018D209 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +216,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		417E55EE28066FED00E2C0D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 417E55DD28066FEC00E2C0D1 /* WhenDoYouSleepWidjetExtension */;
+			targetProxy = 417E55ED28066FED00E2C0D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		41F51AAF27FBF6DC0018D209 /* Main.storyboard */ = {
@@ -166,6 +245,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		417E55F128066FED00E2C0D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZADA25JZ4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhenDoYouSleepWidjet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhenDoYouSleepWidjet;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YourCompany.WhenDoYouSleep-.WhenDoYouSleepWidjet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		417E55F228066FED00E2C0D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZADA25JZ4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhenDoYouSleepWidjet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhenDoYouSleepWidjet;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YourCompany.WhenDoYouSleep-.WhenDoYouSleepWidjet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		41F51AB827FBF6DD0018D209 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,7 +438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,13 +467,22 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		417E55F328066FED00E2C0D1 /* Build configuration list for PBXNativeTarget "WhenDoYouSleepWidjetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417E55F128066FED00E2C0D1 /* Debug */,
+				417E55F228066FED00E2C0D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		41F51AA127FBF6DC0018D209 /* Build configuration list for PBXProject "WhenDoYouSleep?" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
