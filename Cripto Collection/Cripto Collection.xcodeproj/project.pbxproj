@@ -14,6 +14,9 @@
 		4135CADB280D0347006BA432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4135CADA280D0347006BA432 /* Assets.xcassets */; };
 		4135CADE280D0347006BA432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4135CADC280D0347006BA432 /* LaunchScreen.storyboard */; };
 		4135CAE6280D0456006BA432 /* EncryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135CAE5280D0456006BA432 /* EncryptoViewController.swift */; };
+		4135CAEE280D3012006BA432 /* extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135CAED280D3012006BA432 /* extension-UIView.swift */; };
+		4135CAF4280D34A7006BA432 /* EncryptoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135CAF2280D34A7006BA432 /* EncryptoCollectionViewCell.swift */; };
+		4135CAF5280D34A7006BA432 /* EncryptoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4135CAF3280D34A7006BA432 /* EncryptoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		4135CADD280D0347006BA432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4135CADF280D0347006BA432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4135CAE5280D0456006BA432 /* EncryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptoViewController.swift; sourceTree = "<group>"; };
+		4135CAED280D3012006BA432 /* extension-UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension-UIView.swift"; sourceTree = "<group>"; };
+		4135CAF2280D34A7006BA432 /* EncryptoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptoCollectionViewCell.swift; sourceTree = "<group>"; };
+		4135CAF3280D34A7006BA432 /* EncryptoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EncryptoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +72,19 @@
 				4135CADC280D0347006BA432 /* LaunchScreen.storyboard */,
 				4135CADF280D0347006BA432 /* Info.plist */,
 				4135CAE5280D0456006BA432 /* EncryptoViewController.swift */,
+				4135CAED280D3012006BA432 /* extension-UIView.swift */,
+				4135CAE7280D29F3006BA432 /* Encrypto */,
 			);
 			path = "Cripto Collection";
+			sourceTree = "<group>";
+		};
+		4135CAE7280D29F3006BA432 /* Encrypto */ = {
+			isa = PBXGroup;
+			children = (
+				4135CAF2280D34A7006BA432 /* EncryptoCollectionViewCell.swift */,
+				4135CAF3280D34A7006BA432 /* EncryptoCollectionViewCell.xib */,
+			);
+			path = Encrypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +147,7 @@
 			files = (
 				4135CADE280D0347006BA432 /* LaunchScreen.storyboard in Resources */,
 				4135CADB280D0347006BA432 /* Assets.xcassets in Resources */,
+				4135CAF5280D34A7006BA432 /* EncryptoCollectionViewCell.xib in Resources */,
 				4135CAD9280D0344006BA432 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +161,9 @@
 			files = (
 				4135CAD6280D0344006BA432 /* ViewController.swift in Sources */,
 				4135CAD2280D0344006BA432 /* AppDelegate.swift in Sources */,
+				4135CAEE280D3012006BA432 /* extension-UIView.swift in Sources */,
 				4135CAE6280D0456006BA432 /* EncryptoViewController.swift in Sources */,
+				4135CAF4280D34A7006BA432 /* EncryptoCollectionViewCell.swift in Sources */,
 				4135CAD4280D0344006BA432 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
