@@ -104,7 +104,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jd4-tA-Ehs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-684.05797101449275" y="878.57142857142856"/>
+            <point key="canvasLocation" x="-684" y="879"/>
+        </scene>
+        <!--CaesarViewController-->
+        <scene sceneID="FNz-9x-bhf">
+            <objects>
+                <viewController storyboardIdentifier="CaesarViewController" title="CaesarViewController" id="ap8-lO-w9b" customClass="CaesarViewController" customModule="Cripto_Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YSC-gK-NcV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caesar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRg-PD-UyH">
+                                <rect key="frame" x="180" y="438" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X2b-Gu-IBV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zme-JG-gp2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="1542"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mXR-Cw-a2t">

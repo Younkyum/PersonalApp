@@ -17,3 +17,4 @@ class EncryptoCollectionViewCell: UICollectionViewCell {
     }
 
 }
+

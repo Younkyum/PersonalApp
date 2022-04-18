@@ -58,4 +58,36 @@ extension EncryptoViewController: UICollectionViewDataSource {
         return CGSize(width: 70, height: 70)
 
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            print("Anagram")
+        case 1:
+            let newVC = self.storyboard?.instantiateViewController(identifier: "CaesarViewController")
+            newVC?.modalTransitionStyle = .coverVertical
+            newVC?.modalPresentationStyle = .automatic
+            self.present(newVC!, animated: true, completion: nil)
+        case 2:
+            print("affine")
+        case 3:
+            print("hash")
+        default:
+            print("error")
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? EncryptoCollectionViewCell {
+                let pressedDownTransform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 3, options: [.curveEaseInOut], animations: { cell.transform = pressedDownTransform })
+
+            }
+    }
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? EncryptoCollectionViewCell {
+                let originalTransform = CGAffineTransform(scaleX: 1, y: 1)
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 3, options: [.curveEaseInOut], animations: { cell.transform = originalTransform })
+            }
+    }
 }
