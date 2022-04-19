@@ -59,6 +59,7 @@
             </constraints>
             <size key="customSize" width="276" height="293"/>
             <connections>
+                <outlet property="cellBackgroundView" destination="JXN-Eg-XhY" id="Rgd-Fa-Ie9"/>
                 <outlet property="cellImage" destination="OcM-aS-802" id="hSj-Bc-gj3"/>
                 <outlet property="cellLabel" destination="JqL-T1-YaZ" id="ZWk-FH-j62"/>
             </connections>

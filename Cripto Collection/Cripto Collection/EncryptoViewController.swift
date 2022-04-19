@@ -10,6 +10,10 @@ import UIKit
 class EncryptoViewController: UIViewController {
     var codeOption = ["Anagram", "Caesar", "Affine", "Hash(sha256)"]
     var codeOptionImage = [UIImage(systemName: "tornado"), UIImage(systemName: "a"), UIImage(systemName: "abc"), UIImage(systemName: "shadow")]
+    var codeOptionColor = [UIColor(red: 99/255, green: 138/255, blue: 126/255, alpha: 1),
+                           UIColor(red: 231/255, green: 209/255, blue: 146/255, alpha: 1),
+                           UIColor(red: 220/255, green: 151/255, blue: 112/255, alpha: 1),
+                           UIColor(red: 175/255, green: 94/255, blue: 85/255, alpha: 1)]
     
     
     @IBOutlet weak var encryptoCollectionView: UICollectionView!
@@ -49,6 +53,7 @@ extension EncryptoViewController: UICollectionViewDataSource {
         
         cell.cellLabel.text = codeOption[indexPath.row]
         cell.cellImage.image = codeOptionImage[indexPath.row]
+        cell.cellBackgroundView.backgroundColor = codeOptionColor[indexPath.row]
         
         return cell
     }
