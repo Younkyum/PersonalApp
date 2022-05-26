@@ -10,7 +10,6 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var userList = ["User1", "User2", "User3", "User4", "User5"]
-    let user = "Younkyum"
 
     @IBOutlet weak var todayCommitCount: UILabel!
     @IBOutlet weak var mainNameLabel: UILabel!
@@ -20,7 +19,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let user = whoIsUser()
+        mainNameLabel.text = user
+        
         self.userCollectionView.register(UINib(nibName:"MemberCollectionViewCell" , bundle: .main), forCellWithReuseIdentifier: "MemberCollectionViewCell")
+        
         setupFlowLayout()
         getUserAPI(user: user)
         // Do any additional setup after loading the view.
@@ -36,8 +39,16 @@ class HomeViewController: UIViewController {
         self.userCollectionView.collectionViewLayout = flowLayout
     }
     
+    // USER 리턴 (Default: Younkyum)
+    func whoIsUser() -> String {
+        print(UserDefaults.standard.string(forKey: userNameKey))
+        return UserDefaults.standard.string(forKey: userNameKey)!
+    }
+    
+    // API를 받아서 list로 만듬
     func getUserAPI(user: String) {
         let booksUrlStr = "https://api.github.com/users/\(user)/events"
+        print(booksUrlStr)
         
         // Code Input Point #1
          guard let url = URL(string: booksUrlStr) else {
@@ -46,25 +57,26 @@ class HomeViewController: UIViewController {
          
          let session = URLSession.shared
          let task = session.dataTask(with: url) { (data, response, error) in
-             if let error = error {
+             if let error = error { // 에러가 발생함
                  self.showErrorAlert(with: error.localizedDescription)
                  print(error)
                  return
              }
              
              guard let httpResponse = response as? HTTPURLResponse else {
-                 self.showErrorAlert(with: "Invalid Response")
+                 self.showErrorAlert(with: "Invalid Response") // response가 없음
                  return
              }
              
              guard (200...299).contains(httpResponse.statusCode) else {
-                 self.showErrorAlert(with: "\(httpResponse.statusCode)")
+                 self.showErrorAlert(with: "\(httpResponse.statusCode)") // status code 값 비교
                  return
              }
              
-             guard let data = data else {
+             guard let data = data else { // 데이터 동기화 안될경우 오류 발생
                  fatalError("Invalid Data")
              }
+             print("hello2")
              
              do {
                  let decoder = JSONDecoder()
@@ -82,9 +94,10 @@ class HomeViewController: UIViewController {
                  
                  let eventlist = try decoder.decode([Event].self, from: data)
                  print(eventlist[0].type, eventlist[0].created_at, eventlist.count)
-                 DispatchQueue.main.async {
+                 DispatchQueue.main.async { // Main에서 text 값 변경
                      self.todayCommitCount.text = String(self.countTodayCommits(list: eventlist))
                  }
+                 print("hello1")
 
              } catch {
                  print(error)
@@ -92,8 +105,10 @@ class HomeViewController: UIViewController {
              }
          }
          task.resume()
+        print("hello")
     }
     
+    // Int 형태로 오늘 커밋 개수 출력
     func countTodayCommits(list:[Event]) -> Int {
         var totalCount = 0
         let today = self.today()
@@ -106,6 +121,7 @@ class HomeViewController: UIViewController {
         return totalCount
     }
     
+    // String 형태로 오늘 날짜 출력
     func today() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"

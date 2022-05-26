@@ -7,13 +7,22 @@
 
 import UIKit
 
+let initialKey = "initialKey"
+let userNameKey = "userNameKey"
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if !UserDefaults.standard.bool(forKey: initialKey) {
+            UserDefaults.standard.set("Kim-leo", forKey: userNameKey)
+            UserDefaults.standard.set(true, forKey: initialKey)
+        }
+        
         return true
     }
 
