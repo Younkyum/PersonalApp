@@ -21,4 +21,9 @@ class MemberCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func setupLayout() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 10
+    }
 }

@@ -9,16 +9,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var userList = ["User1", "User2"]
+    var userList = ["User1", "User2", "User3", "User4", "User5"]
+    let user = "Younkyum"
 
     @IBOutlet weak var todayCommitCount: UILabel!
     @IBOutlet weak var mainNameLabel: UILabel!
     @IBOutlet weak var userCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.userCollectionView.register(UINib(nibName:"MemberCollectionViewCell" , bundle: .main), forCellWithReuseIdentifier: "MemberCollectionViewCell")
         setupFlowLayout()
+        getUserAPI(user: user)
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +35,84 @@ class HomeViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: halfWidth * 1.83, height: halfWidth * 0.45)
         self.userCollectionView.collectionViewLayout = flowLayout
     }
+    
+    func getUserAPI(user: String) {
+        let booksUrlStr = "https://api.github.com/users/\(user)/events"
+        
+        // Code Input Point #1
+         guard let url = URL(string: booksUrlStr) else {
+             fatalError("Invalid URL")
+         }
+         
+         let session = URLSession.shared
+         let task = session.dataTask(with: url) { (data, response, error) in
+             if let error = error {
+                 self.showErrorAlert(with: error.localizedDescription)
+                 print(error)
+                 return
+             }
+             
+             guard let httpResponse = response as? HTTPURLResponse else {
+                 self.showErrorAlert(with: "Invalid Response")
+                 return
+             }
+             
+             guard (200...299).contains(httpResponse.statusCode) else {
+                 self.showErrorAlert(with: "\(httpResponse.statusCode)")
+                 return
+             }
+             
+             guard let data = data else {
+                 fatalError("Invalid Data")
+             }
+             
+             do {
+                 let decoder = JSONDecoder()
+                 decoder.dateDecodingStrategy = .iso8601
+                 
+                 decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+                     let container = try decoder.singleValueContainer()
+                     let dateStr = try container.decode(String.self)
+                     
+                     let formatter = ISO8601DateFormatter()
+                     formatter.formatOptions = [.withFullDate, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
+                     
+                     return formatter.date(from: dateStr)!
+                 })
+                 
+                 let eventlist = try decoder.decode([Event].self, from: data)
+                 print(eventlist[0].type, eventlist[0].created_at, eventlist.count)
+                 DispatchQueue.main.async {
+                     self.todayCommitCount.text = String(self.countTodayCommits(list: eventlist))
+                 }
+
+             } catch {
+                 print(error)
+                 self.showErrorAlert(with: error.localizedDescription)
+             }
+         }
+         task.resume()
+    }
+    
+    func countTodayCommits(list:[Event]) -> Int {
+        var totalCount = 0
+        let today = self.today()
+        
+        for i in 0...(list.count - 1) {
+            if list[i].created_at.contains(today) && list[i].type == "PushEvent" {
+                totalCount += 1
+            }
+        }
+        return totalCount
+    }
+    
+    func today() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let now = formatter.string(from: Date())
+        return now
+    }
+    
     
 }
 

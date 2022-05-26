@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eal-pT-DU8">
-                                <rect key="frame" x="15" y="199" width="384" height="614"/>
+                                <rect key="frame" x="0.0" y="224" width="414" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g7Y-Bb-aV1">
                                     <size key="itemSize" width="128" height="128"/>
@@ -67,26 +67,34 @@
                                     <outlet property="delegate" destination="EaT-Tn-3wJ" id="ed1-jw-dm1"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-yY-1op">
+                                <rect key="frame" x="20" y="195" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fnt-p5-rlS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eal-pT-DU8" firstAttribute="top" secondItem="ZTf-yY-1op" secondAttribute="bottom" constant="8" symbolic="YES" id="16K-Ng-cDP"/>
                             <constraint firstItem="4ha-3m-jaN" firstAttribute="top" secondItem="Fnt-p5-rlS" secondAttribute="top" id="C17-IO-Qls"/>
                             <constraint firstItem="ckX-23-4Dw" firstAttribute="top" secondItem="4ha-3m-jaN" secondAttribute="bottom" id="D8f-XX-EEX"/>
-                            <constraint firstItem="eal-pT-DU8" firstAttribute="top" secondItem="ckX-23-4Dw" secondAttribute="bottom" constant="15" id="LXA-Mk-XoX"/>
-                            <constraint firstItem="Fnt-p5-rlS" firstAttribute="trailing" secondItem="eal-pT-DU8" secondAttribute="trailing" constant="15" id="NYr-9Q-Mjo"/>
-                            <constraint firstItem="eal-pT-DU8" firstAttribute="leading" secondItem="Fnt-p5-rlS" secondAttribute="leading" constant="15" id="QE8-PW-BN6"/>
+                            <constraint firstItem="eal-pT-DU8" firstAttribute="top" secondItem="ckX-23-4Dw" secondAttribute="bottom" constant="40" id="LXA-Mk-XoX"/>
+                            <constraint firstItem="Fnt-p5-rlS" firstAttribute="trailing" secondItem="eal-pT-DU8" secondAttribute="trailing" id="NYr-9Q-Mjo"/>
+                            <constraint firstItem="eal-pT-DU8" firstAttribute="leading" secondItem="Fnt-p5-rlS" secondAttribute="leading" id="QE8-PW-BN6"/>
                             <constraint firstItem="ckX-23-4Dw" firstAttribute="leading" secondItem="Fnt-p5-rlS" secondAttribute="leading" constant="25" id="S7s-57-KfM"/>
                             <constraint firstItem="a5T-7x-K1b" firstAttribute="centerY" secondItem="ckX-23-4Dw" secondAttribute="centerY" id="ZMj-zY-8Hw"/>
                             <constraint firstItem="4ha-3m-jaN" firstAttribute="leading" secondItem="Fnt-p5-rlS" secondAttribute="leading" constant="25" id="jNO-Ot-Qbx"/>
                             <constraint firstItem="Fnt-p5-rlS" firstAttribute="trailing" secondItem="a5T-7x-K1b" secondAttribute="trailing" constant="20" id="pjO-Z2-t8e"/>
                             <constraint firstItem="Fnt-p5-rlS" firstAttribute="bottom" secondItem="eal-pT-DU8" secondAttribute="bottom" id="w2Y-ae-60Z"/>
+                            <constraint firstItem="ZTf-yY-1op" firstAttribute="leading" secondItem="Fnt-p5-rlS" secondAttribute="leading" constant="20" id="xh7-U2-wRW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AHM-DR-2ia">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="hH7-Cw-QOy">
                             <connections>
-                                <segue destination="Drn-GJ-yBG" kind="presentation" id="5g9-Ew-BS4"/>
+                                <segue destination="Drn-GJ-yBG" kind="push" id="5g9-Ew-BS4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -105,7 +113,7 @@
             <objects>
                 <viewController id="Drn-GJ-yBG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OwZ-Vo-5lz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="add new vc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-V9-qKN">
@@ -119,6 +127,7 @@
                         <viewLayoutGuide key="safeArea" id="m7d-dR-0YJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0bc-iJ-MAk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqT-BJ-whd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

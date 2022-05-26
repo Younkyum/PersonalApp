@@ -16,6 +16,8 @@
 		415F2973283E9B350053271B /* MemberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415F2971283E9B350053271B /* MemberCollectionViewCell.xib */; };
 		415F2975283E9B710053271B /* extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F2974283E9B710053271B /* extension-UIView.swift */; };
 		415F2977283E9CD10053271B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F2976283E9CD10053271B /* HomeViewController.swift */; };
+		415F297F283F1FEC0053271B /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F297E283F1FEC0053271B /* models.swift */; };
+		415F2981283F23F80053271B /* extension-Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F2980283F23F80053271B /* extension-Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		415F2971283E9B350053271B /* MemberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCollectionViewCell.xib; sourceTree = "<group>"; };
 		415F2974283E9B710053271B /* extension-UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension-UIView.swift"; sourceTree = "<group>"; };
 		415F2976283E9CD10053271B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		415F297E283F1FEC0053271B /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		415F2980283F23F80053271B /* extension-Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension-Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				415F2967283E84140053271B /* Info.plist */,
 				415F2974283E9B710053271B /* extension-UIView.swift */,
 				415F2976283E9CD10053271B /* HomeViewController.swift */,
+				415F297E283F1FEC0053271B /* models.swift */,
+				415F2980283F23F80053271B /* extension-Alert.swift */,
 			);
 			path = GitColab;
 			sourceTree = "<group>";
@@ -157,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				415F2977283E9CD10053271B /* HomeViewController.swift in Sources */,
+				415F297F283F1FEC0053271B /* models.swift in Sources */,
+				415F2981283F23F80053271B /* extension-Alert.swift in Sources */,
 				415F2975283E9B710053271B /* extension-UIView.swift in Sources */,
 				415F2972283E9B350053271B /* MemberCollectionViewCell.swift in Sources */,
 				415F295A283E84120053271B /* AppDelegate.swift in Sources */,
