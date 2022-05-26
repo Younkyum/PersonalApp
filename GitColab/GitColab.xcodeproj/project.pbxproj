@@ -24,6 +24,7 @@
 		415F298A283F65F90053271B /* NameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F2989283F65F90053271B /* NameSettingViewController.swift */; };
 		415F298C283F66090053271B /* ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F298B283F66090053271B /* ThemeSettingViewController.swift */; };
 		415F298E283F66170053271B /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F298D283F66170053271B /* NotificationSettingViewController.swift */; };
+		415F2990283FA5C10053271B /* NewFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F298F283FA5C10053271B /* NewFollowerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		415F2989283F65F90053271B /* NameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSettingViewController.swift; sourceTree = "<group>"; };
 		415F298B283F66090053271B /* ThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingViewController.swift; sourceTree = "<group>"; };
 		415F298D283F66170053271B /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
+		415F298F283FA5C10053271B /* NewFollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFollowerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				415F2989283F65F90053271B /* NameSettingViewController.swift */,
 				415F298B283F66090053271B /* ThemeSettingViewController.swift */,
 				415F298D283F66170053271B /* NotificationSettingViewController.swift */,
+				415F298F283FA5C10053271B /* NewFollowerViewController.swift */,
 			);
 			path = GitColab;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				415F295A283E84120053271B /* AppDelegate.swift in Sources */,
 				415F295C283E84120053271B /* SceneDelegate.swift in Sources */,
 				415F2983283F5C4F0053271B /* SettingsViewController.swift in Sources */,
+				415F2990283FA5C10053271B /* NewFollowerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

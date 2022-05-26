@@ -12,7 +12,6 @@ class MemberCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var commitLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var plusView: UIImageView!
     @IBOutlet weak var todayCommitLabel: UILabel!
     
     

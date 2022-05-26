@@ -16,8 +16,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingTable.register(UINib(nibName: "SettingTableViewCell", bundle: .main), forCellReuseIdentifier: "SettingTableViewCell")
-        UserDefaults.standard.set("dawon00", forKey: userNameKey)
-        // Do any additional setup after loading the view.
     }
 
 }

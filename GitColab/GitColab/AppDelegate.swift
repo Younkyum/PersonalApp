@@ -9,6 +9,7 @@ import UIKit
 
 let initialKey = "initialKey"
 let userNameKey = "userNameKey"
+let followerKey = "followerKey"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         if !UserDefaults.standard.bool(forKey: initialKey) {
-            UserDefaults.standard.set("Kim-leo", forKey: userNameKey)
+            UserDefaults.standard.set("github", forKey: userNameKey)
+            let list = ["github"]
+            UserDefaults.standard.set(list, forKey: followerKey)
             UserDefaults.standard.set(true, forKey: initialKey)
         }
         

@@ -48,24 +48,14 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xim-Uw-YmS">
-                                <rect key="frame" x="233.5" y="32.5" width="40" height="36"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="U77-Hi-4ao"/>
-                                    <constraint firstAttribute="width" constant="40" id="lRw-dS-s9F"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Xim-Uw-YmS" firstAttribute="centerY" secondItem="1gh-sU-77A" secondAttribute="centerY" id="3uT-pi-jGx"/>
                             <constraint firstItem="Gb3-5V-Hri" firstAttribute="centerY" secondItem="1gh-sU-77A" secondAttribute="centerY" id="Rua-Ke-qwv"/>
                             <constraint firstItem="21u-8k-irE" firstAttribute="leading" secondItem="1gh-sU-77A" secondAttribute="leading" constant="15" id="Us6-KW-2pB"/>
                             <constraint firstAttribute="trailing" secondItem="Gb3-5V-Hri" secondAttribute="trailing" constant="25" id="dmE-dJ-Pi0"/>
                             <constraint firstItem="KAJ-32-XLO" firstAttribute="top" secondItem="1gh-sU-77A" secondAttribute="top" constant="15" id="dy2-rP-Ww8"/>
                             <constraint firstItem="21u-8k-irE" firstAttribute="top" secondItem="KAJ-32-XLO" secondAttribute="bottom" id="eOH-tE-V4t"/>
-                            <constraint firstItem="Xim-Uw-YmS" firstAttribute="centerX" secondItem="1gh-sU-77A" secondAttribute="centerX" id="ibn-p2-V5s"/>
                             <constraint firstItem="KAJ-32-XLO" firstAttribute="leading" secondItem="1gh-sU-77A" secondAttribute="leading" constant="15" id="kRT-ZN-VTc"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -104,13 +94,9 @@
             <connections>
                 <outlet property="commitLabel" destination="21u-8k-irE" id="F6p-gF-FFR"/>
                 <outlet property="nameLabel" destination="Gb3-5V-Hri" id="wBb-nd-2e6"/>
-                <outlet property="plusView" destination="Xim-Uw-YmS" id="NiG-Zb-wm8"/>
                 <outlet property="todayCommitLabel" destination="KAJ-32-XLO" id="bBP-L5-RZl"/>
             </connections>
             <point key="canvasLocation" x="226.81159420289856" y="102.12053571428571"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
-    </resources>
 </document>

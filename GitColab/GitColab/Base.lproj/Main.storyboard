@@ -19,7 +19,7 @@
                         <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="EaT-Tn-3wJ" kind="relationship" relationship="rootViewController" id="Php-4p-aeQ"/>
+                        <segue destination="EaT-Tn-3wJ" kind="relationship" relationship="rootViewController" id="X3Y-Cp-uDQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ET9-It-Fhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,9 +92,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AHM-DR-2ia">
-                        <barButtonItem key="rightBarButtonItem" title="reload" id="hH7-Cw-QOy"/>
+                        <barButtonItem key="rightBarButtonItem" title="plus" id="4Cv-pn-g8Q">
+                            <connections>
+                                <segue destination="Drn-GJ-yBG" kind="push" id="IMa-OC-fAe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="followerLabel" destination="ZTf-yY-1op" id="THE-0b-WIC"/>
                         <outlet property="mainNameLabel" destination="a5T-7x-K1b" id="uei-lM-4i0"/>
                         <outlet property="todayCommitCount" destination="ckX-23-4Dw" id="I1j-4A-0yA"/>
                         <outlet property="userCollectionView" destination="eal-pT-DU8" id="LMl-VI-y2U"/>
@@ -102,32 +107,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PN1-CN-CYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636.2318840579712" y="-228.34821428571428"/>
+            <point key="canvasLocation" x="1577" y="-238"/>
         </scene>
-        <!--View Controller-->
+        <!--New Follower View Controller-->
         <scene sceneID="lKh-Mo-tzE">
             <objects>
-                <viewController id="Drn-GJ-yBG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewFollowerViewController" id="Drn-GJ-yBG" customClass="NewFollowerViewController" customModule="GitColab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OwZ-Vo-5lz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="add new vc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-V9-qKN">
-                                <rect key="frame" x="212" y="411" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="eg) Younkyum" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-Jj-UvL">
+                                <rect key="frame" x="25" y="148" width="364" height="37.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="shb-6e-b5a" eventType="editingDidEnd" id="dej-It-Kb0"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-jN-Ikh">
+                                <rect key="frame" x="169" y="215" width="76" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm"/>
+                                <connections>
+                                    <action selector="buttonPush:" destination="Drn-GJ-yBG" eventType="touchUpInside" id="2w4-w8-mW9"/>
+                                    <action selector="confirmPushed:" destination="shb-6e-b5a" eventType="touchUpInside" id="JKH-wg-kfP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-aQ-2BP">
+                                <rect key="frame" x="20" y="281" width="374" height="532"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">아이디를 모르겠다면?
+https://github.com/(User name)의 (User name)을 입력해 주세요
+e.g.) www.github.com/Younkyum 인 경우 Younkyum 입력</string>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-lm-sAH">
+                                <rect key="frame" x="20" y="188.5" width="374" height="1.5"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="awn-e3-YJA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m7d-dR-0YJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m7d-dR-0YJ" firstAttribute="trailing" secondItem="4Rq-lm-sAH" secondAttribute="trailing" constant="20" id="2BE-Oz-9W5"/>
+                            <constraint firstItem="4Rq-lm-sAH" firstAttribute="top" secondItem="a4G-Jj-UvL" secondAttribute="bottom" constant="3" id="FyL-yG-9UV"/>
+                            <constraint firstItem="kEO-aQ-2BP" firstAttribute="top" secondItem="Ra4-jN-Ikh" secondAttribute="bottom" constant="35" id="H9j-N4-HwV"/>
+                            <constraint firstItem="m7d-dR-0YJ" firstAttribute="bottom" secondItem="kEO-aQ-2BP" secondAttribute="bottom" id="Ixe-bP-n8T"/>
+                            <constraint firstItem="a4G-Jj-UvL" firstAttribute="leading" secondItem="m7d-dR-0YJ" secondAttribute="leading" constant="25" id="LPp-We-S2S"/>
+                            <constraint firstItem="Ra4-jN-Ikh" firstAttribute="centerX" secondItem="OwZ-Vo-5lz" secondAttribute="centerX" id="QWd-4h-xUY"/>
+                            <constraint firstItem="4Rq-lm-sAH" firstAttribute="leading" secondItem="m7d-dR-0YJ" secondAttribute="leading" constant="20" id="TaX-xk-ODV"/>
+                            <constraint firstItem="m7d-dR-0YJ" firstAttribute="trailing" secondItem="a4G-Jj-UvL" secondAttribute="trailing" constant="25" id="bTb-P1-e0M"/>
+                            <constraint firstItem="kEO-aQ-2BP" firstAttribute="leading" secondItem="m7d-dR-0YJ" secondAttribute="leading" constant="20" id="eWt-c1-Qdc"/>
+                            <constraint firstItem="a4G-Jj-UvL" firstAttribute="top" secondItem="m7d-dR-0YJ" secondAttribute="top" constant="60" id="kF5-Eb-t9h"/>
+                            <constraint firstItem="m7d-dR-0YJ" firstAttribute="trailing" secondItem="kEO-aQ-2BP" secondAttribute="trailing" constant="20" id="nXQ-Yb-FNE"/>
+                            <constraint firstItem="Ra4-jN-Ikh" firstAttribute="top" secondItem="4Rq-lm-sAH" secondAttribute="bottom" constant="25" id="wfK-rQ-ycM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0bc-iJ-MAk"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="Ra4-jN-Ikh" id="3vT-yF-Lgf"/>
+                        <outlet property="inputField" destination="a4G-Jj-UvL" id="3bU-8p-PAD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqT-BJ-whd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2342" y="-228"/>
+            <point key="canvasLocation" x="2367" y="-238"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GLi-fE-K7n">
@@ -342,6 +392,9 @@ e.g.) www.github.com/Younkyum 인 경우 Younkyum 입력</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
