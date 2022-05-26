@@ -24,6 +24,7 @@ class NameSettingViewController: UIViewController {
     
     @IBAction func confirmPushed(_ sender: Any) {
         getUserIsReal(user: self.inputField.text!)
+        
     }
     
     func getUserIsReal(user: String) {
@@ -57,7 +58,7 @@ class NameSettingViewController: UIViewController {
              }
              DispatchQueue.main.async {
                  UserDefaults.standard.set(self.inputField.text!, forKey: userNameKey)
-                 self.presentingViewController?.dismiss(animated: true)
+                 self.navigationController?.popViewController(animated: true)
              }
              
          }

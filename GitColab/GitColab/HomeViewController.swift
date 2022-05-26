@@ -15,6 +15,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mainNameLabel: UILabel!
     @IBOutlet weak var userCollectionView: UICollectionView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        let user = whoIsUser()
+        mainNameLabel.text = user
+        
+        self.userCollectionView.register(UINib(nibName:"MemberCollectionViewCell" , bundle: .main), forCellWithReuseIdentifier: "MemberCollectionViewCell")
+        
+        setupFlowLayout()
+        getUserAPI(user: user)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,5 +165,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == userList.count {
+            
+        }
+    }
     
 }

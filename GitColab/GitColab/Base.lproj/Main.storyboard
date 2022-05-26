@@ -67,7 +67,7 @@
                                     <outlet property="delegate" destination="EaT-Tn-3wJ" id="ed1-jw-dm1"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-yY-1op">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-yY-1op">
                                 <rect key="frame" x="20" y="195" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -92,11 +92,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AHM-DR-2ia">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="hH7-Cw-QOy">
-                            <connections>
-                                <segue destination="Drn-GJ-yBG" kind="push" id="5g9-Ew-BS4"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="reload" id="hH7-Cw-QOy"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mainNameLabel" destination="a5T-7x-K1b" id="uei-lM-4i0"/>
@@ -136,7 +132,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="GLi-fE-K7n">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VG0-jL-Sah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="WKw-w4-Y4J" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tnt-dL-aap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -148,6 +143,7 @@
                         <segue destination="6xk-TS-1oQ" kind="relationship" relationship="viewControllers" id="BSg-vT-Blz"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VG0-jL-Sah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42" y="111"/>
         </scene>
@@ -341,7 +337,6 @@ e.g.) www.github.com/Younkyum 인 경우 Younkyum 입력</string>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
