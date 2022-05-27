@@ -25,24 +25,23 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userList = getFollowers()
+        print(userList)
+        for i in userList{
+            print(i)
+            getMemberAPI(user: i)
+        }
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ifAllRecevied), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
     
     func base() {
         let user = whoIsUser()
         mainNameLabel.text = user
-        
-        self.userCollectionView.register(UINib(nibName:"MemberCollectionViewCell" , bundle: .main), forCellWithReuseIdentifier: "MemberCollectionViewCell")
-        
-        userList = getFollowers()
-        print(userList)
-        fCommits = getTodayCommits(lists: eventLists)
-        print(fCommits)
-        userCollectionView.reloadData()
         followerLabel.text = "Follower " + String(userList.count)
         setupFlowLayout()
         getUserAPI(user: user)
+        self.userCollectionView.register(UINib(nibName:"MemberCollectionViewCell" , bundle: .main), forCellWithReuseIdentifier: "MemberCollectionViewCell")
     }
     
     private func setupFlowLayout() {
@@ -111,7 +110,6 @@ class HomeViewController: UIViewController {
                  })
                  
                  let eventlist = try decoder.decode([Event].self, from: data)
-                 print(eventlist[0].type, eventlist[0].created_at, eventlist.count)
                  DispatchQueue.main.async { // Main에서 text 값 변경
                      self.todayCommitCount.text = String(self.countTodayCommits(list: eventlist))
                  }
@@ -129,16 +127,11 @@ class HomeViewController: UIViewController {
     func countTodayCommits(list:[Event]) -> Int {
         var totalCount = 0
         let today = self.today()
-        
-        print("its me")
-        print(list)
-        
         for i in list {
             if i.created_at.contains(today) && i.type == "PushEvent" {
                 totalCount += 1
             }
         }
-        print(totalCount)
         return totalCount
     }
     
@@ -151,14 +144,16 @@ class HomeViewController: UIViewController {
     }
     
     func getMemberAPI(user: String) {
-        let booksUrlStr = "https://api.github.com/users/\(user)/events"
+        let follower = user
+        let booksUrlStr = "https://api.github.com/users/\(follower)/events"
+        
         // Code Input Point #1
          guard let url = URL(string: booksUrlStr) else {
              fatalError("Invalid URL")
          }
          
          let session = URLSession.shared
-        let task = session.dataTask(with: url) { [self] (data, response, error) in
+         let task = session.dataTask(with: url) { (data, response, error) in
              if let error = error { // 에러가 발생함
                  self.showErrorAlert(with: error.localizedDescription)
                  print(error)
@@ -178,7 +173,6 @@ class HomeViewController: UIViewController {
              guard let data = data else { // 데이터 동기화 안될경우 오류 발생
                  fatalError("Invalid Data")
              }
-            print("hello1")
              
              do {
                  let decoder = JSONDecoder()
@@ -195,30 +189,34 @@ class HomeViewController: UIViewController {
                  })
                  
                  let eventlist = try decoder.decode([Event].self, from: data)
+                 print(eventlist[0].type)
                  self.eventLists.append(eventlist)
-                 print("hello2")
-                 
-                 
+
              } catch {
                  print(error)
                  self.showErrorAlert(with: error.localizedDescription)
              }
          }
-        task.resume()
+         task.resume()
     }
     
-    func getTodayCommits(lists:[[Event]]) -> [Int] {
+    func getTodayCommits() -> [Int] {
         var countList = [Int]()
-        for i in userList{
-            getMemberAPI(user: i)
-            print(eventLists)
-        }
-        for i in lists {
+        
+        for i in eventLists {
             let a = countTodayCommits(list: i)
             countList.append(a)
-            print(a)
         }
+        print(countList)
         return countList
+    }
+    
+    @objc func ifAllRecevied() {
+        print(eventLists.count)
+        if eventLists.count >= 2 {
+            fCommits = getTodayCommits()
+            userCollectionView.reloadData()
+        }
     }
 }
 
@@ -232,8 +230,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemberCollectionViewCell", for: indexPath) as? MemberCollectionViewCell else { return UICollectionViewCell() }
         
         cell.nameLabel.text = userList[indexPath.row]
-        let counts = fCommits[indexPath.row]
-        cell.commitLabel.text = String(counts)
+        if fCommits.count >= 2 {
+            let counts = fCommits[indexPath.row]
+            cell.commitLabel.text = String(counts)
+        }
+        
         
         return cell
     }
