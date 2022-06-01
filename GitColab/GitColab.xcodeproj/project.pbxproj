@@ -25,6 +25,7 @@
 		415F298C283F66090053271B /* ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F298B283F66090053271B /* ThemeSettingViewController.swift */; };
 		415F298E283F66170053271B /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F298D283F66170053271B /* NotificationSettingViewController.swift */; };
 		415F2990283FA5C10053271B /* NewFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F298F283FA5C10053271B /* NewFollowerViewController.swift */; };
+		415F299C2847894A0053271B /* apiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415F299B284789490053271B /* apiModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		415F298B283F66090053271B /* ThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingViewController.swift; sourceTree = "<group>"; };
 		415F298D283F66170053271B /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
 		415F298F283FA5C10053271B /* NewFollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFollowerViewController.swift; sourceTree = "<group>"; };
+		415F299B284789490053271B /* apiModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,8 @@
 		415F2958283E84120053271B /* GitColab */ = {
 			isa = PBXGroup;
 			children = (
+				415F2992284084C50053271B /* extensions */,
+				415F2991284084A00053271B /* ViewControllers */,
 				415F2984283F5EAA0053271B /* settingCell */,
 				415F296D283E9AF80053271B /* memberCell */,
 				415F2959283E84120053271B /* AppDelegate.swift */,
@@ -88,15 +92,8 @@
 				415F2962283E84140053271B /* Assets.xcassets */,
 				415F2964283E84140053271B /* LaunchScreen.storyboard */,
 				415F2967283E84140053271B /* Info.plist */,
-				415F2974283E9B710053271B /* extension-UIView.swift */,
-				415F2976283E9CD10053271B /* HomeViewController.swift */,
 				415F297E283F1FEC0053271B /* models.swift */,
-				415F2980283F23F80053271B /* extension-Alert.swift */,
-				415F2982283F5C4F0053271B /* SettingsViewController.swift */,
-				415F2989283F65F90053271B /* NameSettingViewController.swift */,
-				415F298B283F66090053271B /* ThemeSettingViewController.swift */,
-				415F298D283F66170053271B /* NotificationSettingViewController.swift */,
-				415F298F283FA5C10053271B /* NewFollowerViewController.swift */,
+				415F299B284789490053271B /* apiModule.swift */,
 			);
 			path = GitColab;
 			sourceTree = "<group>";
@@ -117,6 +114,28 @@
 				415F2986283F5ECC0053271B /* SettingTableViewCell.xib */,
 			);
 			path = settingCell;
+			sourceTree = "<group>";
+		};
+		415F2991284084A00053271B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				415F2976283E9CD10053271B /* HomeViewController.swift */,
+				415F2982283F5C4F0053271B /* SettingsViewController.swift */,
+				415F2989283F65F90053271B /* NameSettingViewController.swift */,
+				415F298B283F66090053271B /* ThemeSettingViewController.swift */,
+				415F298D283F66170053271B /* NotificationSettingViewController.swift */,
+				415F298F283FA5C10053271B /* NewFollowerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		415F2992284084C50053271B /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				415F2974283E9B710053271B /* extension-UIView.swift */,
+				415F2980283F23F80053271B /* extension-Alert.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +223,7 @@
 				415F295A283E84120053271B /* AppDelegate.swift in Sources */,
 				415F295C283E84120053271B /* SceneDelegate.swift in Sources */,
 				415F2983283F5C4F0053271B /* SettingsViewController.swift in Sources */,
+				415F299C2847894A0053271B /* apiModule.swift in Sources */,
 				415F2990283FA5C10053271B /* NewFollowerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

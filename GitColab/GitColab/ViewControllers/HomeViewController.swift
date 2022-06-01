@@ -27,18 +27,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         userList = getFollowers()
         print(userList)
-        for i in userList{
-            print(i)
-            getMemberAPI(user: i)
-        }
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ifAllRecevied), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
+    
     
     func base() {
         let user = whoIsUser()
         mainNameLabel.text = user
-        followerLabel.text = "Follower " + String(userList.count)
+        followerLabel.text = "Follower " + String(eventLists.count)
         setupFlowLayout()
         getUserAPI(user: user)
         self.userCollectionView.register(UINib(nibName:"MemberCollectionViewCell" , bundle: .main), forCellWithReuseIdentifier: "MemberCollectionViewCell")
@@ -198,6 +194,7 @@ class HomeViewController: UIViewController {
              }
          }
          task.resume()
+        
     }
     
     func getTodayCommits() -> [Int] {
@@ -223,7 +220,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userList.count
+        return eventLists.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

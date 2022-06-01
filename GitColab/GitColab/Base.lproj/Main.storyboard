@@ -182,7 +182,8 @@ e.g.) www.github.com/Younkyum 인 경우 Younkyum 입력</string>
         <!--Tab Bar Controller-->
         <scene sceneID="GLi-fE-K7n">
             <objects>
-                <tabBarController id="WKw-w4-Y4J" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WKw-w4-Y4J" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NDb-fZ-Glu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tnt-dL-aap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
